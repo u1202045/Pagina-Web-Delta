@@ -7,6 +7,19 @@ body{
     margin: 0;
 }
 
+.button{
+    display: inline-block;
+    background-color: #1e4496;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: .5rem;
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+}
+
 .menu a{  
     margin: 0.5em 0 0.5em 0;
     color: #fff;
@@ -26,7 +39,7 @@ body{
 
 h2{
     margin: 0.5em 0 0.5em 0;
-    font-size: 5rem;
+    font-size: calc(4rem + 1vw);
     font-weight: bold;
     -webkit-text-fill-color: #376de2;
     -webkit-text-stroke: 3px #1e4496;
@@ -52,26 +65,48 @@ p{
 
 .menu h1{
     margin: 0.5em 0 0.5em 0;
-    font-size: 5rem;
+    font-size: calc(5rem + 1vw);
     font-weight: bold;
     -webkit-text-fill-color: #d7284c;
     -webkit-text-stroke: 4px #801329;
 }
+
 .menu .home_social{
     margin: 0.5em 0 0.5em 0;
     display:block; 
 }
+
 .home_social{
     margin: auto;
     
 }
 
-
-
 .informacion{
    background-color: #7a0323; 
    border-left:solid 0.80em #58041b;
 }
+
+.card{
+    background-color: #1f48a0;
+    margin: 5em 5em 0 0;
+    transition: all 50ms ease-out;
+}
+
+.card:hover{
+    background: #10285e;
+    transform: scale(1.05);
+}
+
+.card h3{
+    font-size: calc(1rem + 1vw);
+    font-weight: bold;
+    -webkit-text-fill-color: #d7284c;
+    -webkit-text-stroke: 0.06em #801329;
+}
+.cv-botton{
+    background-color: #801329;
+}
+
 
 
 
