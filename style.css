@@ -32,9 +32,17 @@ body{
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #7a0323;
+    color: #eb3d6b;
     background-color: rgba(256, 256, 256, 0.15);
     font-weight: bolder;
+}
+
+h1{
+    margin: 0.5em 0 0.5em 0;
+    font-size: calc(5rem + 1vw);
+    font-weight: bold;
+    -webkit-text-fill-color: #d7284c;
+    -webkit-text-stroke: 4px #630215;
 }
 
 h2{
@@ -53,6 +61,7 @@ h3{
 p{
     margin: 0.5em 2.5em 0.25em 2.5em;
     text-align: justify;
+    font-size: calc(0.5rem + 1vw);
 }
 
 .menu{
@@ -68,7 +77,7 @@ p{
     font-size: calc(5rem + 1vw);
     font-weight: bold;
     -webkit-text-fill-color: #d7284c;
-    -webkit-text-stroke: 4px #801329;
+    -webkit-text-stroke: 4px #b80025;
 }
 
 .menu .home_social{
@@ -82,8 +91,8 @@ p{
 }
 
 .informacion{
-   background-color: #7a0323; 
-   border-left:solid 0.80em #58041b;
+   background-color: #d7efff; 
+   border-left:solid 0.80em #9c022b;
 }
 
 .card{
