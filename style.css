@@ -116,6 +116,28 @@ p{
     background-color: #801329;
 }
 
+.subtitulos{
+    margin: 0.5em 0 0.5em 0;
+    font-size: calc(2rem + 1vw);
+    font-weight: bold;
+    -webkit-text-fill-color: #6696ff;
+    -webkit-text-stroke: 1px #1e4496;
+}
+
+.listopequeña li{
+    
+    font-size: 1px;
+}
+
+li{
+    font-size: calc(1rem + 1vw);
+}
+
+ul{
+    font-size: calc(0.4rem + 1vw);
+    -webkit-text-fill-color: #d7284c;
+}
+
 
 
 
