@@ -20,6 +20,19 @@ body{
     align-items: center;
 }
 
+.versionez{
+    display: flex; 
+    justify-content: center;
+}
+
+.contenido{
+    padding-left: 10rem;
+    height:80px;
+    width:10%;
+    float:left;
+    margin: 10px;
+}
+
 .menu a{  
     margin: 0.5em 0 0.5em 0;
     color: #fff;
@@ -31,10 +44,18 @@ body{
     background-color: #1e4496;
 }
 
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+  }
+
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #eb3d6b;
     background-color: rgba(256, 256, 256, 0.15);
     font-weight: bolder;
+    
 }
 
 h1{
@@ -64,12 +85,17 @@ p{
     font-size: calc(0.5rem + 1vw);
 }
 
+a{
+    font-size: 2rem;
+}
+
 .menu{
     text-align: center;
     background-color: #376de2;
     min-height: 100vh;
     border-right: solid 0.80em #1f48a0;
     padding-top: 2.5%;
+    
 }
 
 .menu h1{
@@ -99,11 +125,16 @@ p{
     background-color: #1f48a0;
     margin: 5em 5em 0 0;
     transition: all 50ms ease-out;
+    border: solid 0.5rem; color: rgb(117, 149, 255);
 }
 
+.card-columns{
+    padding-top: -3rem;
+}
 .card:hover{
     background: #10285e;
     transform: scale(1.05);
+    border: solid 0.5rem; color: rgb(0, 255, 76);
 }
 
 .card h3{
@@ -115,6 +146,7 @@ p{
 .cv-botton{
     background-color: #801329;
 }
+
 
 .subtitulos{
     margin: 0.5em 0 0.5em 0;
@@ -138,20 +170,28 @@ ul{
     -webkit-text-fill-color: #d7284c;
 }
 
+ul.versiones li {
+    display: inline;
+    padding-right: 5.5em;
+  }
+
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #1e4496;
     background-color: rgba(256, 256, 256, 0.15);
     font-weight: bolder;
+    font-size: 1rem;
 }
 
 #v-pills-home nav{
-    border: solid 1px #1e4496;
+    border: solid 0.1rem #1e4496;
+    padding: 1rem;
 }
 
 #v-pills-home .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #1e4496;
     font-weight: bolder;
+    font-size: 2rem;
 
 }
 
@@ -237,18 +277,18 @@ ul{
         background-color: #630215;
         color: #ffff;
         text-align: center;
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
     .footer_title{
-        font-size:2rem;
-        margin-bottom: 2em;
+        font-size:1rem;
+        margin-bottom: 1em;
     }
     .footer_social{
-        margin-bottom: 2em;
+        margin-bottom: 1em;
     }
     .footer_icon{
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: #ffff;
-        margin: 0 2em;
+        margin: 0 2rem;
     }
 
