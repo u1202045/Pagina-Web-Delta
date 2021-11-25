@@ -85,6 +85,10 @@ p{
     font-size: calc(0.5rem + 1vw);
 }
 
+.tex_hom{
+    text-align: center;
+}
+
 a{
     font-size: 2rem;
 }
@@ -117,7 +121,7 @@ a{
 }
 
 .informacion{
-   background-color: #ffffff; 
+   background-color: #fff; 
    border-left:solid 0.80em #9c022b;
 }
 
@@ -125,16 +129,17 @@ a{
     background-color: #1f48a0;
     margin: 5em 5em 0 0;
     transition: all 50ms ease-out;
-    border: solid 0.5rem; color: rgb(117, 149, 255);
+    border: solid 0.5rem; color: #1f48a0;
 }
 
 .card-columns{
     padding-top: -3rem;
+    
 }
 .card:hover{
     background: #10285e;
     transform: scale(1.05);
-    border: solid 0.5rem; color: rgb(0, 255, 76);
+    border: solid 0.5rem; color: #801329;
 }
 
 .card h3{
@@ -275,12 +280,13 @@ ul.versiones li {
 
     .footer{
         background-color: #630215;
+        width: 100%;
         color: #ffff;
         text-align: center;
         padding: 1rem 0;
     }
     .footer_title{
-        font-size:1rem;
+        font-size:2rem;
         margin-bottom: 1em;
     }
     .footer_social{
