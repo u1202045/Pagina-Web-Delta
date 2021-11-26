@@ -24,11 +24,11 @@
 
               <div class="sticky">
                 <div class ="Home col-12 col-sm-12 col-lg-12">
-                   <a href="#pills-cohete"><h1>Delta</h1></a> 
+                   <h1>Delta</h1>
                 </div>
 
                 <div class="foto" style="max-width: 85%; margin: 0 Auto;">
-                   <a href="#pills-cohete"> <img src="IMG/cohete.png" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;"></a> 
+                   <img src="IMG/cohete.png" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
                 </div>
 
                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -36,6 +36,7 @@
                     <a class="nav-link" id="v-pills-educacion-tab" data-toggle="pill" href="#v-pills-sensores" role="tab" aria-controls="v-pills-sensores-tab" aria-selected="false">Sensores</a>
                     <a class="nav-link" id="v-pills-habilidad-tab" data-toggle="pill" href="#v-pills-paso" role="tab" aria-controls="v-pills-paso" aria-selected="false">Paso a Paso</a>
                     <a class="nav-link" id="v-pills-experiencia-tab" data-toggle="pill" href="#v-pills-nuestro_equipo" role="tab" aria-controls="v-pills-nuestro_equipo" aria-selected="false">Nuestro Equipo</a>
+                    <a class="nav-link" id="v-pills-informe_final-tab" data-toggle="pill" href="#v-pills-informe_final" role="tab" aria-controls="v-pills-informe_final" aria-selected="false">Informe Final</a>
                     <a class="nav-link" id="v-pills-portafolio-tab" data-toggle="pill" href="#v-pills-contacto" role="tab" aria-controls="v-pills-contacto" aria-selected="false">Contacto</a>
                 
                 </div>
@@ -457,6 +458,219 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+
+<!--    Informe Final    -->
+                        <div class="tab-pane fade" id="v-pills-informe_final" role="tabpanel" aria-labelledby="v-pills-informe_final-tab">
+                            <div class="tex_hom"><h1>Informe Final</h1></div>
+                                <div>
+                                    <div class="intro">
+                                        <h2 class="subtitulos">1:</h2>
+                                        <div class="p_info"><p>Detalles de la propuesta de su grupo de trabajo. Especificar los detalles de la figura.1</p></div>
+                                            <img src="IMG/Home/informe/1.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                        <div class="p_info"><p>Teniendo en cuenta la figura 1 se van analizar todas las secciones contenidas para los detalles técnicos del diseño</p></div>
+                                            <img src="IMG/Home/informe/2.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;"> 
+                                    </div>
+                                    <div>
+                                        <h2>Seccion 1:</h2>
+                                        <h3>BMP280:</h3>
+                                            <li>A GM niveles de tensión que se van a manejar son de 5v sin embargo se va usar un regulador de 3.3 voltios debido a que el sensor tiene un voltaje de trabajo de 3.3</li>
+                                            <li>El sensor mide las variables de presión y altura directamente y de manera indirecta por programación hace la medida de la altura tomando como referencia la presión atmosférica de Bogotá</li>
+                                            <li>Es un sensor digital entonces las señales que envía al Arduino son de carácter digital</li>
+                                            <li>Se le programó intervalos de medida en un delay de 100 que quiere decir esto que la medida del sensor va a ser cada 100 mseg</li>
+                                        <h3>FOTORRESISTENCIA:</h3>
+                                            <li>Va ha manejar valores de tensión de 0-5v</li>
+                                            <li>El sensor medirá las variables de luz con respecto a la oposición del flujo de electrones sobre el circuito</li>
+                                            <li>Es un sensor análogo</li>
+                                            <li>Maneja intervalos de medida de 100 mseg.</li>
+
+                                           <h3>KY-017</h3>
+                                            <li>Niveles de tensión de 3.3-5v</li>
+                                            <li>Medirá la inclinación del cohete.</li>
+                                            <li>Sensor digital</li>
+                                            <li>Maneja intervalos de medida de 100 mseg.</li>
+                                        </div>  
+                                        <div>
+                                            <h2>Sección 2</h2>
+                                            <h3>Tipo de protocolo</h3>
+                                            <li>El protocolo RS232 para la fotorresistencia y para el KY-017</li>
+                                            <li>El protocolo I2C para el BMP280</li>
+                                        </div>  
+                                        <div>
+                                            <h2>Sección 3</h2>
+                                            <li>El microcontrolador para usar es el Arduino debido a su fácil manejo y las diferentes guías que este nos puede ofrecer para la programación de los sensores.</li>
+                                            <li>El Arduino maneja niveles de alimentación de de 5V y genera niveles de tensión variables en las salidas análogas de 0-5V y salidas de voltaje exacto de 5 V y 3.3 V</li>
+                                            <li>Maneja señales análogas por medio de un conversor ADC y Señales Digitales según la aplicación</li>
+                                        </div>  
+                                        <div>
+                                            <h2>Sección 4</h2>
+                                            <li>El protocolo de comunicación que usa el transceiver es el de SPI para la radiocomunicación</li>
+                                            <li>Va a enviar una cadena de caracteres con las variables separadas por medio de una coma que daría un total 20 letras</li>
+                                        </div> 
+                                        <div>
+                                            <h2>Sección 5</h2>
+                                            <li>El tipo de transceiver que se va usar para la comunicación es el NRF24L01</li>
+                                            <li>Va ha manejar un data rate 250 kbs</li>
+                                            <li>Potencia 18dB</li>
+                                            <li>Modulación GFSK</li>
+                                            <li>Se va usar el canal 125 sabiendo eso el ancho de banda que se usará es de 2525 MHz</li>
+                                            <li>Se vieron otras opciones como lo son los módulos bluetooth, wifi,y otras de radio frecuencia</li>
+                                        </div>
+                                </div>
+                                <div>
+                                        <h2 class="subtitulos">2:</h2>
+                                        <div class="p_info"><p>Planos y diagramas Planos electrónicos de los montajes realizados donde se indique claramente las especificaciones y referencias de los elementos, voltajes, conexiones, etc. </p></div>
+                                            <img src="IMG/Home/informe/3.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                        <div class="p_info"><p>La img 2 hace referencia al montaje realizado para el transmisor de datos del sistema de telemetría del cohete Delta, el cual como se puede observar  se basa en el modelo de comunicación de Shannon el cual consiste de una fuente de información, un transmisor, una fuente de ruido en el canal, un receptor y un destino final(este está en la img 3). 
+                                                                En este caso la fuente de información es el sensado, el transmisor el módulo de comunicación que está compuesto de la antena con el circuito impreso, el canal es el aire y las fuentes de ruido que pueden afectar a este son las diferentes tecnologías que trabajan en las bandas de 2.4 y 2.5GHz.</p></div>
+                                            <img src="IMG/Home/informe/4.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <p>Como ya se había mencionado anteriormente  este montaje se basa en el modelo de comunicación propuesto por  Shannon, este montaje hace referencia al receptor el cual en este caso es el segundo módulo de comunicación que está compuesto de la antena con el circuito impreso,  y este envía la cadena de datos comunicación serial al destino que es en Matlab para así poder observar estos gráficamente. </p>         
+                                 </div>
+                                 <div>        
+                                            <h2 class="subtitulos">3:</h2>  
+                                            <div class="p_info"><p> Análisis de las señales en el tiempo Mediante el empleo de un osciloscopio digital se miden las señales en el tiempo durante todo el proceso. Tenga en cuenta las señales presentes en el transmisor (cohete), como en el receptor (estación de tierra). Explique el diseño realizado por su equipo para las tramas de datos.Para el análisis de las señales en el tiempo mediante la aplicación del osciloscopio se debe tener en cuenta cual es la información que se está enviando y recibiendo en cada uno de los extremos como podemos ver en la siguiente imagen el escenario que se va a implementar para la comunicación. </p></div>
+                                            <img src="IMG/Home/informe/5.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <p>En el caso de la antena emisora que va a estar ubicada dentro del cohete vamos a compilar la información recogida por cada uno de los sensores ubicados en este teniendo en cuenta que se va a usar un microcontrolador para el procesamiento de los datos que reúnen los sensores y darles la representación correspondientes para enviarlos mediante una antena de radiofrecuencia la cual tiene una configuración de canal 125 y opera con una frecuencia de 2525 MHz en la parte de la recepción de la información se tendrá la otra antena y con esta vamos a tener otra placa arduino para que haga el proceso de lectura de los datos y con un ordenador o portátil se va a usar el software de matlab para representar los datos y hacer el análisis correspondiente en la siguiente imagen podremos visualizar un resumen del sistema de  comunicación que se va a implementar. </p>
+                                            <div class="img_colum">
+                                            <img src="IMG/Home/informe/6.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/7.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            </div>
+                                            <p>Para el análisis del osciloscopio vamos a conectar el dispositivo al Tx del arduino y a la tierra de esta para ver cómo se representan los bits de envío teniendo en cuenta que se configuró una tasa de transferencia de 9600 baudios en el arduino para la comunicación enviando un total de 18 caracteres los cuales están representados para los valores de los sensores.
+                                                En el laboratorio se lograron sacar las siguientes imágenes lo cual <br> <br> está representada la señal cuadrada con los bits de transferencia pero hay que aclarar que se le va a colocar tres más uno de inicio, uno de parada y uno de paridad por seguridad y la codificación de la información.      
+                                            </p>
+                                            <div class="img_colum">
+                                            <img src="IMG/Home/informe/8.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/9.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/10.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/11.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/12.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/13.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            </div>
+                                            <h3 style="text-align: center; font-size: calc(1rem + 1vw); padding-right: 4 rem;">Número de paquetes = 4; <br> 
+                                                Número de valores dentro de cada paquete = 4;
+                                            </h3>
+                                            <p>Se tiene en cuenta que el número de valores dentro de cada paquete es de 4 porque se tiene en cuenta el punto que separa el valor entero con el decimal.
+                                                Se sabe que cada valor tiene por configuración inicial de arduino, 18 bits de datos más 2 bits de inicio y stop, por lo tanto una sola trama de paquetes tendrá:
+                                                </p>
+                                            <h3 style="text-align: center; font-size: calc(1rem + 1vw); padding-right: 4 rem;">#bits de una trama: 4 * 20= 80 bits <br> <br>
+                                                #bites total = 33 bits * 4 paquetes = 134 bits  
+                                            </h3>
+                                            <p>Entonces, una sola trama de información contiene 134 bits. <br>
+                                                Ahora se tiene que tener presente la comunicación rs232 donde se tratará de enviar la información por serial con una tasa de baudios de 9600.
+                                                tiempo bit = 1/9600=104.16uS <br>
+                                                Tiempo total trama = 104.16uS * 134 bits =14mS <br>
+                                                
+                                                Entonces para enviar una sola trama de información que contiene información de 4 variables se gastaría aproximadamente 1.66 mS. <br>
+                                                El tiempo de muestreo prácticamente  consiste en cuánto tiempo es necesario dejarlo transcurrir para tomar el siguiente gráfico. Esto se explica a partir de un gráfico:
+                                                </p>
+                                                <img src="IMG/Home/informe/14.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                                <p>como se pueden ver en los gráficos el osciloscopio se usa las herramientas de los cursores del eje X para mirar el tiempo de transferencia de una trama el delta de x en el gráfico vemos que es de 14.4mS un valor cercano al calculado con las fórmulas en la gran mayoría de estas la diferencia con el teórico y el experimental es muy mínima un valor acai que no se aprecia ya que es por unos dos o tres decimales de diferencia.</p>
+                                       
+                                </div>
+                                <div>
+                                    <h2 class="subtitulos">4:</h2>
+                                    <div class="p_info"><p>Análisis de las señales en la frecuencia Mediante el empleo de un analizador de espectros mide las señales provenientes del cohete. Cambie y configure los canales y las potencias de transmisión. Realice las pruebas en al menos tres canales diferentes.</p></div>
+                                   
+                                    <img src="IMG/Home/informe/15.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 12 muestra la señal en el canal 125, con una frecuencia de 2525 MHz, tasa de transferencia de 2 Mbps, potencia 18dBm y span de 8MHz.</P>
+                                  
+                                    <img src="IMG/Home/informe/16.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 13 muestra la señal en el canal 125, con una frecuencia de 2525 MHz, tasa de transferencia de 1 Mbps, potencia 18dBm y span de 8MHz.</P>
+                                   
+                                    <img src="IMG/Home/informe/17.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 14 muestra la señal en el canal 125, con una frecuencia de 2525 MHz, tasa de transferencia de 250kbps, potencia 18dBm y span de 8MHz. <br>
+                                       <span>Análisis de las  imágenes 12, 13 y 14. <br></span> 
+                                        Estas imágenes  tienen en común todo excepto la tasa de transferencia de datos, ya que fue el dato a variar para un primer análisis. Se observa que con 2 Mbps  la señal tiene  una cantidad importante de picos ya que es la tasa que más envía  información en un menor tiempo, en comparación   con la tasa de transferencia de datos de 1Mbps  que al enviar  menos información tiene una menor cantidad de picos  y ocurre lo mismo con la de 250 kbps pero esta adicionalmente  tiene una interferencia con otra comunicación que está en un canal cercano.
+                                    </P>
+                                   
+                                    <img src="IMG/Home/informe/19.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 15 muestra la señal en el canal 120, con una frecuencia de 2520 MHz, tasa de transferencia de 2 Mbps, potencia 18dBm y span de 8MHz.</P>
+                                   
+                                    <img src="IMG/Home/informe/20.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 16 muestra la señal en el canal 120, con una frecuencia de 2520 MHz, tasa de transferencia de 1 Mbps, potencia 18dBm y span de 8MHz.</P>
+                                  
+                                    <img src="IMG/Home/informe/21.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 17 muestra la señal en el canal 120, con una frecuencia de 2520 MHz, tasa de transferencia de 250kbps, potencia 18dBm y span de 8MHz. <br>
+                                        <span>Análisis de las imágenes 15, 16 y 17. <br></span>
+                                        Se tiene que al cambiar el canal por uno más bajo (canal 120, frecuencia 2520 MHz)  disminuye la cantidad de picos, en general  la señal se mantiene constante. Con la tasa de transferencia de 250kbps se observó que ya no existía la interferencia con otras comunicaciones que antes tenía.
+                                        </P>
+                                   
+                                        <img src="IMG/Home/informe/21.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 18 muestra la señal en el canal 115, con una frecuencia de 2515 MHz, tasa de transferencia de 2 Mbps, potencia 18dBm y span de 8MHz.</P>
+                                  
+                                    <img src="IMG/Home/informe/22.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 19 muestra la señal en el canal 115, con una frecuencia de 2515 MHz, tasa de transferencia de 1 Mbps, potencia 18dBm y span de 8MHz.</P>
+                                   
+                                    <img src="IMG/Home/informe/23.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                    <P>La img 20 muestra la señal en el canal 115, con una frecuencia de 2515 MHz, tasa de transferencia de 250kbps, potencia 18dBm y span de 8MHz. <br>
+                                        <span>Análisis de las imágenes 18, 19 y 20: <br></span>
+                                         Se baja el  canal y la frecuencia (canal 115, frecuencia 2515 MHz)  y se observa que en  comparación con las anteriores pruebas no hubo ningún cambio significativo.
+                                        </P>
+                                    
+                                    <img src="IMG/Home/informe/24.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                     <P>La img 21  muestra la señal en el canal 95, con una frecuencia de 2495 MHz, tasa de transferencia de 2 Mbps, potencia 18dBm y span de 8MHz.</P>
+                                   
+                                     <img src="IMG/Home/informe/25.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                     <P>La img 22  muestra la señal en el canal 95, con una frecuencia de 2495 MHz, tasa de transferencia de 2 Mbps, potencia 6dBm y span de 8MHz.</P>
+                                        
+                                     <img src="IMG/Home/informe/26.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                     <P>La img 23  muestra la señal en el canal 95, con una frecuencia de 2495 MHz, tasa de transferencia de 2 Mbps, potencia 0dBm y span de 8MHz. <br>
+                                        <span>Análisis imágenes 21, 22 y 23: <br></span>
+                                        Para estas pruebas se redujo el canal a  95 y se variaron con las diferentes potencias que ofrece la librería del módulo (RadioHead/RH_NRF24.h), se observa que entre más pequeña sea la potencia la cantidad de picos es menor, por ejemplo en la transmisión de 18dBm hay varios  picos por división en comparación a los que hay en la transmisión con  0dbm.
+                                        </P>
+                                </div>
+
+                                <div>
+                                    <h2 class="subtitulos">4.1:</h2>
+                                    <p>Especifique el proceso requerido para la modificación de los parámetros de radiofrecuencia en su módulo de comunicación inalámbrica. <br> <br>
+                                        La modificación de los parámetros de radiofrecuencia del módulo de comunicación NRF24L01 es versátil, ya que de manera rápida por código en el IDE de Arduino se pueden usar diferentes velocidades y niveles de potencia. Lo primero a tener en cuenta es la librería del módulo (RadioHead/RH_NRF24.h) la cual de manera muy específica muestra cómo escribir el código correspondiente a cada velocidad y potencia, además de otras cuestiones técnicas como la conexión con diferentes dispositivos de control. <br> <br>
+                                        Si se busca la librería en Google y se accede al repositorio de Github tal como en la imagen 24, se podrá observar toda la información técnica del módulo y sus diferentes configuraciones, bajando un poco se podrá ver las tasas de transmisión de datos, los niveles de potencia y cómo escribir el código (Imagen 25); también como se muestra en la imagen 26 se puede ver como configurar primero el canal, la frecuencia de este es igual a 2400 + canal MHz, por lo que si el canal es 100, la frecuencia será de 2500 MHz; y en segundo lugar se puede evidenciar cómo configurar la tasa de transmisión de datos y la potencia, especificando antes el módulo con “RH_NRF24::TransmitPower”  y con “RH_NRF24::DataRate”.
+                                        </p>
+                                        <div class="img_colum">
+                                            <img src="IMG/Home/informe/27.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/28.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            <img src="IMG/Home/informe/29.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">
+                                            </div>
+                                        <p>Lo siguiente es hacer una estructura de control if en el IDE de Arduino, en la sección del void loop, que permita establecer estos parámetros con lo visto en el repositorio de la librería, y permita saber si se presenta un fallo en la inicialización, el establecimiento del canal, o el establecimiento de las tasas de datos o potencias. Se preguntará por el valor devuelto de la función “nrf24.init()”, este será verdadero si la inicialización del módulo fue exitosa, ahora, al agregar el signo de admiración “!” lo que se está queriendo decir es que si la inicialización ha fallado, lo siguiente es que se imprima en pantalla un mensaje de esto. La misma estructura se puede usar para el canal, las tasas de transmisión de datos y las potencias, teniendo de esta forma completa la configuración de los parámetros de radiofrecuencia tal como en la imagen 20.
+                                        </p>
+                                        <img src="IMG/Home/informe/30.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">       
+                                </div>
+
+                                <div>
+                                    <h2 class="subtitulos">4.2:</h2>
+                                    <p>Cálculos y pruebas de alcance. Teniendo en cuenta la información técnica del módulo de comunicación, realice los cálculos de alcance para todas las posibilidades de configuración de los parámetros de RF (potencias, anchos de banda y sensitividades). Realice pruebas de alcance y documente el procedimiento y analice los resultados obtenidos.  <br> <br>
+                                        Para realizar los cálculos hay que remitirse al modelo básico de propagación inalámbrica mostrado en la imagen x, el cual define qué parámetros intervienen en la comunicación; estos son: 
+                                        </p>
+                                    <li>Pérdidas por trayectoria</li>
+                                    <li>Potencia transmisor/receptor</li>
+                                    <li>Pérdidas en las líneas</li>
+                                    <li>Ganancias de las antenas</li>
+                                    <li>Potencias isotrópicas efectivas radiada o recibida</li>
+                                    <li>Distancia entre tx y rx.</li>
+                                    <img src="IMG/Home/informe/31.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">       
+                                    <p>Las pérdidas por trayectoria está dada por la siguiente ecuación: <br><br>
+                                        LF(dB)=32.44 + 20log10R+20log10F <br> <br>
+                                        En la cual la distancia está en km y la frecuencia en MHz. Sabiendo esto, como muchos de los parámetros están expresados en decibeles, se puede hacer los cálculos simplemente sumando o restando. Para el caso del proyecto que se está realizando ya se tiene conocimiento de las ganancias de las antenas, las sensibilidades del módulo de comunicación la cual se ve en la imagen, y la frecuencia de operación, por lo que el dato que se necesitaría hallar o despejar es la distancia entre el transmisor y el receptor
+                                        </p>
+                                    <img src="IMG/Home/informe/formula.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">       
+                                    <p><br></p>
+                                    <img src="IMG/Home/informe/32.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">       
+                                    <p>Por ejemplo para el caso de 0 dBm de potencia y -82dBm de sensitividad, con una frecuencia de 2400 MHz, luego de reemplazar los valores en la fórmula anterior, se puede evidenciar que la distancia máxima teórica sería de 198 metros; si usamos diferentes niveles de potencia con las diferentes sensibilidades se puede ver como varía la distancia significativamente con un mínimo de 35 metros y un máximo de 790 metros, tal como en la tabla 1.</p>
+                                    <img src="IMG/Home/informe/33.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">       
+                                    <p>br</p>
+                                    <img src="IMG/Home/informe/34.PNG" class="img-fluid" alt="Responsive foto" style="margin: 0.5em 0 0.5em 0;">       
+                                    <p>Una vez conocidos los cálculos teóricos, se puede pasar a hacer pruebas reales con los módulos de recepción y transmisión (Imagen 30), y se procede a registrar las distancias recorridas con el transmisor hasta el momento que deja de recibir datos la estación base. (Tabla 2)</p>    
+                                </div>
+
+                                <div>
+                                    <h2 class="subtitulos">5: Análisis de la estación de tierra. </h2>
+                                    <div class="p_info"><p><span>5.1</span> Almacenamiento de mediciones en la estación de tierra. Determine el intervalo de tiempo mínimo que tienen las muestras recibidas en la estación base. Envíe una secuencia progresiva de mediciones desde el transmisor. Almacene las muestras recibidas en un archivo de texto y analice los resultados.</p></div>
+                                    <div class="p_info"><p><span>5.2</span> Visualización de las mediciones Presente los resultados de diseño de su sistema de visualización en tiempo real. Explique las pruebas realizadas para el desarrollo de esta parte del sistema y las ventajas y limitaciones que tiene para garantizar su funcionamiento durante el vuelo. </p></div>
+                                   
+
+                                </div>   
+
                         </div>
 
 <!--    Contacto    -->

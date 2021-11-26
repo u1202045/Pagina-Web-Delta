@@ -84,13 +84,20 @@ p{
     text-align: justify;
     font-size: calc(0.5rem + 1vw);
 }
-
+.p_info p{
+    text-align: center; 
+    font-size: calc(1rem + 1vw); 
+    padding-right: 4rem;
+}
 .tex_hom{
     text-align: center;
 }
 
 a{
     font-size: 2rem;
+}
+span{
+    color: #801329;
 }
 
 .menu{
