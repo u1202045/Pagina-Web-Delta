@@ -20,9 +20,9 @@ body{
     align-items: center;
 }
 
-.versionez{
+.versiones{
     display: flex; 
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .contenido{
@@ -174,18 +174,9 @@ span{
 }
 
 li{
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.5rem + 1vw);
 }
 
-ul{
-    font-size: calc(0.4rem + 1vw);
-    -webkit-text-fill-color: #d7284c;
-}
-
-ul.versiones li {
-    display: inline;
-    padding-right: 5.5em;
-  }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #1e4496;
@@ -309,4 +300,3 @@ ul.versiones li {
         color: #ffff;
         margin: 0 2rem;
     }
-
